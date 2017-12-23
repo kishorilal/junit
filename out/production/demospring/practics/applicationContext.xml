@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:p="http://www.springframework.org/schema/p"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <!-- <bean id="studentbean" class="bean.Student">
+        <property name="name" value="Vimal Jaiswal"></property>
+    </bean>
+    <bean id="studentbean1" class="bean.Student1">
+        <property name="sid" value="101"></property>
+        <constructor-arg>
+            <ref bean="addressbean"/>
+        </constructor-arg>
+
+    </bean>-->
+    <bean id="addressbean" class="practics.Address">
+        <property name="city" value="neemrana"></property>
+        <property name="dist" value="alwar"></property>
+        <property name="state" value="rajasthan"></property>
+        <property name="country" value="india"></property>
+
+
+    </bean>
+<bean id="emp" class="practics.Employee">
+    <constructor-arg value="101" type="int"></constructor-arg>
+    <constructor-arg value="what is java"></constructor-arg>
+    <constructor-arg>
+        <ref bean="addressbean"/>
+    </constructor-arg>
+
+</bean>
+</beans>
